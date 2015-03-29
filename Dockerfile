@@ -3,5 +3,5 @@ MAINTAINER Jan Suchotzki <jan@inginform.de>
 
 # Install git
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		git \
+		nano \
 	&& rm -rf /var/lib/apt/lists/*
