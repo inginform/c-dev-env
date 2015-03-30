@@ -25,7 +25,7 @@ Alternativ kann auch das `Dockerfile` überarbeitet werden und via `git clone` o
 
 ##Wartung
 
-Dieses Image verwendet [Automated Builds](http://docs.docker.com/docker-hub/builds/). Damit wird die aktuellste Version des `Dockerfiles` immer automatisch vom Docker Hub gebaut und bereit gestellt. Über einen [Repository link](http://docs.docker.com/docker-hub/builds/#repository-links) wird sicher gestellt, dass auch Änderungen am verwendeten Basisimage (`debian:jessie`) automatisch in dieses Image einfliessen. Somit gibt es aktuell keine manuellen Schritte dies Image zu warten.
+Dieses Image verwendet [Automated Builds](http://docs.docker.com/docker-hub/builds/). Damit wird die aktuellste Version des `Dockerfiles` immer automatisch auf [Docker Hub](https://registry.hub.docker.com/u/inginform/c-dev-env/) gebaut und bereit gestellt. Über einen [Repository link](http://docs.docker.com/docker-hub/builds/#repository-links) wird sicher gestellt, dass auch Änderungen am verwendeten Basisimage automatisch in dieses Image einfliessen. Somit gibt es aktuell keine manuellen Schritte dies Image zu warten.
 
 ##Copyright free
 
