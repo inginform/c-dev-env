@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Jan Suchotzki <jan@inginform.de>
 
-# Install git
+# Installiere die benötigten Anwendungen & Bibliotheken zur C-Entwicklung
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		git \
 		gcc \
