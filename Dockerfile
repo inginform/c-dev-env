@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM buildpack-deps:jessie-scm
 MAINTAINER Jan Suchotzki <jan@inginform.de>
 
 # Install git
