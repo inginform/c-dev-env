@@ -13,14 +13,14 @@ Folgende Anwendungen werden dem Basisimage hinzugefügt:
 
 Das Ziel ist ein möglichst kleines Image zum erstellen von C-Programmen zu haben. Dabei soll die Umgebung die notwendigsten Tools bereit stellen, aber trotzdem möglichst kompakt sein. Dies Image dient als Basisimage für komplexere Images mit Entwicklungsumgebungen (z.B. mit zusätzlichen spezifischen Bibliotheken oder Tools). Es kann somit projektspezifisch angepasst werden.
 
-Durch die Verwendung von `git`, ist das Image etwas größer als notwendig. Momentan sehe ich `git` für meine Arbeit in den Containern als wichtig an. Es wäre aber auch möglich es weg zu lassen. Dann könnte Quellcode via `ADD` oder vom Host via `docker run -v ...` in den Container gelangen.
+Durch die Verwendung von `git`, ist das Image etwas größer als notwendig. Momentan sehe ich `git` für meine Arbeit in den Containern als wichtig an. Es wäre aber auch möglich es weg zu lassen. Dann könnte Quellcode via `curl` oder vom Host via `docker run -v ...` in den Container gelangen.
 
 ##Anwendung
 
 Die einfachste Art das Image zu verwenden ist, wenn ein C-Projekt, welches auf dem Host gespeichert ist, im Image verwendet wird:
 `docker run --rm -it -v $(pwd):/usr/src/project/ -w /usr/src/project/ c-dev-env /bin/bash`
 
-Alternativ kann auch das `Dockerfile` überarbeitet werden und via `git clone` oder `ADD` der Quellcode direkt in das Image kopiert werden. Wenn dies der Fall ist, kann das Image einfach so gestartet werden:
+Alternativ kann auch das `Dockerfile` überarbeitet werden und via `git clone` oder `curl` der Quellcode direkt in das Image kopiert werden. Wenn dies der Fall ist, kann das Image so gestartet werden:
 `docker run --rm -it c-dev-env /bin/bash`
 
 ##Wartung
@@ -29,4 +29,4 @@ Dieses Image verwendet [Automated Builds](http://docs.docker.com/docker-hub/buil
 
 ##Copyright free
 
-Wie alle Inhalte auf [ing.inform](www.inginform.de) ist auch dieser Quellcode frei von Copyright. Das heißt, der Urheber verzichtet auf jegliche Nutzungsbedingungen. Entsprechend kann der erstellte Quellcode in jeglicher Art und Weise verwendet werden. Du brauchst keinerlei Bestätigung von mir um die Inhalte zu verarbeiten. Du kannst sie einfach teilen, drucken, verändern, ... und das alles mit oder ohne meinen Namen zu nennen. Viel Spaß!
+Wie alle Inhalte auf [ing.inform](http://www.inginform.de) ist auch dieser Quellcode frei von Copyright [nach CC0](LICENSE.md). Das heißt, ich verzichtet auf jegliche Nutzungsbedingungen. Entsprechend kann der erstellte Quellcode in jeglicher Art und Weise verwendet werden. Du brauchst keinerlei Bestätigung von mir um die Inhalte zu verarbeiten. Du kannst sie einfach teilen, drucken, verändern, ... und das alles mit oder ohne meinen Namen zu nennen. Viel Spaß!
