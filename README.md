@@ -9,9 +9,13 @@ Folgende Anwendungen werden dem Basisimage hinzugefügt:
 * **make:** Build-Management-Tool zum einfachen erstellen von Programmen die aus mehreren Quelldateien besteht. [Beschreibung von Make auf Wikipedia](http://de.wikipedia.org/wiki/Make)
 * **nano:** Einfacher Texteditor für die Kommandozeile von GNU. [GNU Nano Webseite](http://www.nano-editor.org)
 
+Hinweis: Obwohl GCC 5.1 gerade erschienen ist, werde ich noch nicht darauf umstellen. Der Grund ist, dass dies noch nicht von der verwendeten Linux Distribution bereit gestellt wird. Das [Docker GCC Image](https://registry.hub.docker.com/_/gcc/) wird gerade auf Version 5.1 angepasst. Es wird wahrscheinlich in einigen Tagen erscheinen.
+
 ##Über
 
 Das Ziel ist ein möglichst kleines Image zum erstellen von C-Programmen zu haben. Dabei soll die Umgebung die notwendigsten Tools bereit stellen, aber trotzdem möglichst kompakt sein. Dies Image dient als Basisimage für komplexere Images mit Entwicklungsumgebungen (z.B. mit zusätzlichen spezifischen Bibliotheken oder Tools). Es kann somit projektspezifisch angepasst werden.
+
+Ebenfalls wichtig ist mir, dass sich GCC im Image verhält wie in der verwendeten Linux Distribution (Debian). Bei meinen ersten Versuchen habe ich das offizielle GCC Image aus der Docker Library verwendet. Dabei bin ich sofort auf ein Problem gestoßen, weil dies Image das Kommand `cc` bis dahin nicht unterstützte. Um sicher zu stellen, dass sich mein Image verhält wie die Distribution, verwende ich nur offizielle Debian Pakete. Das [GCC Image](https://registry.hub.docker.com/_/gcc/) aus der Docker Library geht einen anderen Weg. Daher ist jenes auch manchmal etwas aktueller (GCC 5.1 wird gerade vorbereitet).
 
 Durch die Verwendung von `git`, ist das Image etwas größer als notwendig. Momentan sehe ich `git` für meine Arbeit in den Containern als wichtig an. Es wäre aber auch möglich es weg zu lassen. Dann könnte Quellcode via `curl` oder vom Host via `docker run -v ...` in den Container gelangen.
 
