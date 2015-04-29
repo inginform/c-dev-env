@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		curl \
 		ca-certificates \
 		git \
-		gcc \
+		gcc-4.9 \
 		libc6-dev \
 		make \
 		nano \
