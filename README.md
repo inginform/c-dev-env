@@ -9,7 +9,7 @@ Folgende Anwendungen werden dem Basisimage hinzugefügt:
 * **make:** Build-Management-Tool zum einfachen erstellen von Programmen die aus mehreren Quelldateien besteht. [Beschreibung von Make auf Wikipedia](http://de.wikipedia.org/wiki/Make)
 * **nano:** Einfacher Texteditor für die Kommandozeile von GNU. [GNU Nano Webseite](http://www.nano-editor.org)
 
-Hinweis: Obwohl GCC 5.1 gerade erschienen ist, werde ich noch nicht darauf umstellen. Der Grund ist, dass dies noch nicht von der verwendeten Linux Distribution bereit gestellt wird. Das [Docker GCC Image](https://registry.hub.docker.com/_/gcc/) wird gerade auf Version 5.1 angepasst. Es wird wahrscheinlich in einigen Tagen erscheinen.
+Hinweis: Obwohl GCC 5.1 gerade erschienen ist, werde ich noch nicht darauf umstellen. Der Grund ist, dass dies noch nicht von der verwendeten Linux Distribution bereit gestellt wird. Das [Docker GCC Image](https://registry.hub.docker.com/_/gcc/) ist auch mit Version 5.1 erhältlich.
 
 ##Über
 
