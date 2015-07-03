@@ -22,10 +22,10 @@ Durch die Verwendung von `git`, ist das Image etwas größer als notwendig. Mome
 ##Anwendung
 
 Die einfachste Art das Image zu verwenden ist, wenn ein C-Projekt, welches auf dem Host gespeichert ist, im Image verwendet wird:
-`docker run --rm -it -v $(pwd):/usr/src/project/ -w /usr/src/project/ c-dev-env /bin/bash`
+`docker run --rm -it -v $(pwd):/usr/src/project/ -w /usr/src/project/ inginform/c-dev-env /bin/bash`
 
 Alternativ kann auch das `Dockerfile` überarbeitet werden und via `git clone` oder `curl` der Quellcode direkt in das Image kopiert werden. Wenn dies der Fall ist, kann das Image so gestartet werden:
-`docker run --rm -it c-dev-env /bin/bash`
+`docker run --rm -it inginform/c-dev-env /bin/bash`
 
 ##Wartung
 
